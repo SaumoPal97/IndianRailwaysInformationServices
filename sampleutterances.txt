@@ -1,0 +1,3 @@
+LiveTrainStatusIntent train status for train number {trainnumber} on {doj}
+TrainRouteIntent check route for train number {trainnumber}
+GetTrainNumberIntent get train number for {trainname}

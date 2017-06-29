@@ -1,0 +1,44 @@
+{
+  "intents": [
+    {
+      "intent": "LiveTrainStatusIntent",
+      "slots": [
+        {
+          "name": "trainnumber",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "doj",
+          "type": "AMAZON.DATE"
+        }
+      ]
+    },
+    {
+      "intent": "TrainRouteIntent",
+      "slots": [
+        {
+          "name": "trainnumber",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "GetTrainNumberIntent",
+      "slots": [
+        {
+          "name": "trainname",
+          "type": "LIST_OF_TRAINS"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
