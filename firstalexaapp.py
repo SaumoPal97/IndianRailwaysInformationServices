@@ -92,6 +92,23 @@ def share_train_route(trainnumber):
 def share_train_number(trainname):
     return statement(get_train_number(trainname))
 
+@ask.intent('AMAZON.HelpIntent')
+def help():
+    help_text = render_template('For live train status, say train status for train number followed by number on followed by date of journey...For train route, say check route for train number followed by number...For getting train number for a train name, say get train number for followed by train name...')
+    return question(help_text).reprompt(help_text)
+
+
+@ask.intent('AMAZON.StopIntent')
+def stop():
+    bye_text = render_template('bye')
+    return statement(bye_text)
+
+
+@ask.intent('AMAZON.CancelIntent')
+def cancel():
+    bye_text = render_template('bye')
+    return statement(bye_text)
+
 if __name__ == '__main__':
     app.run(debug=True)
 
